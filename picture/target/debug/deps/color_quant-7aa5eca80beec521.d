@@ -1,0 +1,8 @@
+/workspaces/terminal-picture/picture/target/debug/deps/color_quant-7aa5eca80beec521.d: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/color_quant-1.1.0/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/color_quant-1.1.0/src/math.rs
+
+/workspaces/terminal-picture/picture/target/debug/deps/libcolor_quant-7aa5eca80beec521.rlib: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/color_quant-1.1.0/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/color_quant-1.1.0/src/math.rs
+
+/workspaces/terminal-picture/picture/target/debug/deps/libcolor_quant-7aa5eca80beec521.rmeta: /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/color_quant-1.1.0/src/lib.rs /home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/color_quant-1.1.0/src/math.rs
+
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/color_quant-1.1.0/src/lib.rs:
+/home/codespace/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/color_quant-1.1.0/src/math.rs:
