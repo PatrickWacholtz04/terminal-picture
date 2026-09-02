@@ -3,6 +3,7 @@ use std::{error::Error, fs::File, io::Write, env};
 
 const DEFAULT_W:usize = 16;
 const DEFAULT_H:usize = 16;
+const DEFAULT_IMAGE_SIZE:usize = 250;
 
 
 fn main() -> Result<(), Box<dyn Error>> {
@@ -19,10 +20,22 @@ fn main() -> Result<(), Box<dyn Error>> {
         .and_then(|arg| arg.parse().ok())
         .unwrap_or(DEFAULT_H);
 
-    let manual = args.iter().any(|arg| arg == "manual");
+    let manual = args
+        .iter()
+        .any(|arg| arg == "manual");
+
+    let image_size: usize = args
+        .iter()
+        .find_map(|arg| {
+            arg.strip_prefix("image:")
+                .and_then(|value| value.parse().ok())
+        })
+        .unwrap_or(DEFAULT_IMAGE_SIZE);
+
+
 
     if manual == false {
-        let resp = reqwest::blocking::get("https://picsum.photos/250")?;
+        let resp = reqwest::blocking::get(format!("https://picsum.photos/{image_size}"))?;
         let bytes = resp.bytes()?;
 
         let mut file = File::create("../picture/images/image.jpg")?;
