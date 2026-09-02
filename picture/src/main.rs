@@ -1,12 +1,19 @@
 use image::{GenericImageView, ImageReader, Pixel};
-use std::{error::Error};
-// use std::io;
+use std::{error::Error, fs::File, io::Write};
+
 
 fn main() -> Result<(), Box<dyn Error>> {
+    let resp = reqwest::blocking::get("https://picsum.photos/50")?;
+    let bytes = resp.bytes()?;
+
+    let mut file = File::create("../picture/images/image.jpg")?;
+    file.write_all(&bytes)?;
+
+
     let path = "../picture/images/image.jpg"; // Hard code test image
     // Define terminal output size
-    const TERM_W: usize = 16;
-    const TERM_H: usize = 16;
+    const TERM_W: usize = 50;
+    const TERM_H: usize = 50;
 
     let mut screen_buf: [[(usize, usize, usize); TERM_H]; TERM_W] = [[(0, 0, 0); TERM_H]; TERM_W];
 
@@ -88,4 +95,3 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     Ok(())
 }
-
