@@ -69,7 +69,7 @@ cargo run -- Width Height Manual
 
 When using Manual mode, you will need to name the desired image ```image.jpg```
 and place it into the project at ```../picture/images```
-    * If the project is later run without the Manual argument, it will overwrite the image.
+* If the project is later run without the Manual argument, it will overwrite the image.
 
 
 
