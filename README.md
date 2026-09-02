@@ -61,11 +61,12 @@ cd picture
 ## Usage
 The project can be run with 3 optional arguments
 ```
-cargo run -- Width Height Manual
+cargo run -- Width Height Manual image:size
 ```
 * Width: Specifies the output width (Default 16)
 * Height: Specifies the output height(Default 16)
 * Manual: Determines whether to fetch an image from Picsum-Photos API (Default False)
+* Image: Specifies the size of the image pulled from Picsum-Photos API (Default 250). Exp: 'cargo run -- image:100'
 
 When using Manual mode, you will need to name the desired image ```image.jpg```
 and place it into the project at ```../picture/images```
